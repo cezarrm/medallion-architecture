@@ -30,3 +30,7 @@ for file in os.listdir(input_dir):
           df[col] = df[col].apply(lambda x: str(x) if isinstance(x, list) else x)
 
     df = df.drop_duplicates().reset_index(drop=True)
+
+    #save file parquet format
+    df.to_parquet(output_path, index=False)
+    print(f"O arquivo {file} normalizado e salvo com {output_path}")
