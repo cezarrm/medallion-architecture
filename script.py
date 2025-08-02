@@ -1,8 +1,9 @@
 import requests
 import pandas as pd
 
-#receive a cep as parameter and replace in the http request
+
 def get_data(cep):
+    #receive a cep as parameter and replace in the http request
     endpoint = f"https://viacep.com.br/ws/{cep}/json/"
     try:
         response = requests.get(endpoint)  # Request API
