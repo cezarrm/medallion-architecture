@@ -49,6 +49,4 @@ This project implements an ETL (Extract, Transform, Load) pipeline focused on Br
 3. Upload processed files to S3: **python upload_to_s3.py**
 
 ## Architecture Diagram
-graph TD
-    API[API CEP] --> Bronze[Bronze (Raw Data)]
-    Bronze --> Silver[Silver (Cleaned / ETL)]
+![Archtecture](diagram.png)
